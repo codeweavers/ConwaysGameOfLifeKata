@@ -1,0 +1,12 @@
+<div>
+    <table class="conway-grid table table-responsive">
+        <tr ng-repeat="row in data">
+           <td ng-repeat="column in row track by $index" ng-class="{'active': true == column, 'started': started, 'active-started': true == column && started}" ng-click="update($index, $parent.$index)"></td>
+        </tr>
+    </table>
+    
+    <button class="btn btn-default" ng-click="reset()" ng-disabled="!actions.reset"><i class="glyphicon glyphicon-refresh"></i> Reset</button>
+    <button class="btn btn-default" ng-click="pause()" ng-disabled="!actions.pause"><i class="glyphicon glyphicon-pause"></i> Pause</button>
+    <button class="btn btn-default" ng-click="next()" ng-disabled="!actions.next"><i class="glyphicon glyphicon-forward"></i> Next</button>
+    <button class="btn btn-default" ng-click="play()" ng-disabled="!actions.play"><i class="glyphicon glyphicon-play"></i> Play</button>
+</div>

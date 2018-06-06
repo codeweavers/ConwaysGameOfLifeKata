@@ -1,0 +1,35 @@
+body {
+    min-width: 320px;
+}
+
+table.conway-grid {
+    width: inherit;
+}
+
+table.conway-grid tr td {
+    background-color: #eee;
+    border: 1px solid #fff;
+    height: 30px;
+    width: 30px;
+    transition: all .1s ease-in-out;
+}
+
+table.conway-grid tr td:hover,
+table.conway-grid tr td.active:hover {
+    background-color: #f05556;
+    cursor: pointer;
+}
+
+table.conway-grid tr td.active {
+    background-color: #fbb161;
+}
+
+table.conway-grid tr td.started:hover {
+    cursor: default;
+    background-color: #eee;
+}
+
+table.conway-grid tr td.active-started:hover {
+    cursor: default;
+    background-color: #fbb161;
+}
